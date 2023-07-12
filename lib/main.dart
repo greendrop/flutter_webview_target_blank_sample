@@ -211,9 +211,9 @@ class _WebViewPageState extends State<WebViewPage> {
                         if (await canLaunchUrl(url)) {
                           await launchUrl(url,
                               mode: LaunchMode.externalApplication);
+                          return true;
                         }
                       }
-                      return true;
                     },
                   ),
                   progress < 1.0
